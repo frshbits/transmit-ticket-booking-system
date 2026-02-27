@@ -879,11 +879,15 @@
 
   /* Scroll reveal */
   .reveal {
-    opacity: 0;
-    transform: translateY(40px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.8s ease, transform 0.8s ease;
   }
-  .reveal.visible {
+  .reveal.animate {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  .reveal.animate.visible {
     opacity: 1;
     transform: translateY(0);
   }
@@ -1175,7 +1179,7 @@
         </div>
         <div class="event-body">
           <div class="event-date">June 2026 — London</div>
-          <div class="event-name">Supreme DNB Night</div>
+          <div class="event-name">Informal</div>
           <div class="event-meta">Drum & Bass · All night long<br>Doors 10pm – 5am</div>
           <div class="event-footer">
             <div class="event-price">
@@ -1208,7 +1212,7 @@
         <div class="event-body">
           <div class="event-date">June 2026 — London</div>
           <div class="event-name">A Tribute to Randall</div>
-          <div class="event-meta">Jungle · Drum & Bass · A night for a legend<br>Doors 9pm – 4am</div>
+          <div class="event-meta">Jungle · Drum & Bass · Honouring the legacy of a pioneer<br>Doors 9pm – 4am</div>
           <div class="event-footer">
             <div class="event-price">
               <span class="from">From</span>
@@ -1256,7 +1260,7 @@
     </h2>
     <p class="cta-desc reveal">Join the waitlist. We're onboarding UK promoters first — starting with the drum & bass and jungle scene.</p>
     <div class="cta-buttons reveal">
-      <a href="mailto:hello@transmit.io" class="btn-primary">Get Early Access</a>
+      <a href="/cdn-cgi/l/email-protection#3a525f5656557a4e485b544957534e145355" class="btn-primary">Get Early Access</a>
       <a href="#features" class="btn-outline">See the Platform</a>
     </div>
   </div>
@@ -1269,7 +1273,7 @@
   <span class="footer-copy">© 2026 Transmit. Built by the scene, for the scene.</span>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
@@ -1322,11 +1326,4 @@
           entry.target.classList.add('visible');
         }, idx * 80);
         observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-
-  reveals.forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+ 
